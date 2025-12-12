@@ -47,3 +47,11 @@ If you make changes to the layout or styling controls but don't see them reflect
 
 = 1.0.0 =
 *   Initial release.
+
+== Screenshots ==
+
+1. Elementor Elements Panel (assets/screenshots/Elementor Elements Panel - Bodyloom Icon List and Toggles Plugins.png)
+2. Content Edit Panel (assets/screenshots/Edit Bodyloom Icon List Content Edit Panel.png)
+3. Style Edit Panel 1 (assets/screenshots/Edit Bodyloom Icon List Style Edit Panel 1.png)
+4. Style Edit Panel 2 (assets/screenshots/Edit Bodyloom Icon List Style Edit Panel 2.png)
+5. Rendered Frontend Example (assets/screenshots/Bodyloom Dynamic Icon List Rendered.jpg)
