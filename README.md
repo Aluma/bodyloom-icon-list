@@ -48,16 +48,21 @@ If you make changes to the layout or styling controls but don't see them reflect
 ## Screenshots
 
 *Elementor Elements Panel*
+
 ![Elementor Elements Panel](assets/screenshots/Elementor%20Elements%20Panel%20-%20Bodyloom%20Icon%20List%20and%20Toggles%20Plugins.png)
 
 *Content Edit Panel*
+
 ![Content Edit Panel](assets/screenshots/Edit%20Bodyloom%20Icon%20List%20Content%20Edit%20Panel.png)
 
 *Style Edit Panel 1*
+
 ![Style Edit Panel 1](assets/screenshots/Edit%20Bodyloom%20Icon%20List%20Style%20Edit%20Panel%201.png)
 
 *Style Edit Panel 2*
+
 ![Style Edit Panel 2](assets/screenshots/Edit%20Bodyloom%20Icon%20List%20Style%20Edit%20Panel%202.png)
 
 *Rendered Frontend Example*
+
 ![Rendered Frontend Example](assets/screenshots/Bodyloom%20Dynamic%20Icon%20List%20Rendered.jpg)
