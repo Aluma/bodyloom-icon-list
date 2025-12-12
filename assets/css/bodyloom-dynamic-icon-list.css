@@ -1,0 +1,876 @@
+/*! bodyloom-elementor-addon - v1.19.3 - 03-12-2025 */
+.bodyloom-widget-icon-list-title {
+    color: var(--bodyloom-icon-list-title-color, var(--bodyloom-colors-heading));
+    margin: 0 0 var(--bodyloom-icon-list-title-gap, 20px);
+    transition: color .3s ease
+}
+
+.bodyloom-widget-icon-list-title:hover {
+    color: var(--bodyloom-icon-list-title-hover-color, var(--bodyloom-icon-list-title-color, var(--bodyloom-colors-heading)))
+}
+
+.bodyloom-widget-icon-list-item-text {
+    white-space: var(--bodyloom-text-nowrap, normal)
+}
+
+.bodyloom-widget-icon-list-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    -moz-column-count: var(--bodyloom-icon-list-columns-count, auto);
+    column-count: var(--bodyloom-icon-list-columns-count, auto);
+    -moz-column-gap: var(--bodyloom-icon-list-columns-gap, 2em);
+    column-gap: var(--bodyloom-icon-list-columns-gap, 2em);
+    -moz-column-rule: var(--bodyloom-icon-list-columns-rule-weight, 1px) var(--bodyloom-icon-list-columns-rule-style, none) var(--bodyloom-icon-list-columns-rule-color, var(--bodyloom-colors-bd));
+    column-rule: var(--bodyloom-icon-list-columns-rule-weight, 1px) var(--bodyloom-icon-list-columns-rule-style, none) var(--bodyloom-icon-list-columns-rule-color, var(--bodyloom-colors-bd))
+}
+
+.bodyloom-widget-icon-list-item {
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+.bodyloom-widget-icon-list-item:not(:first-child) {
+    margin-top: var(--bodyloom-icon-list-items-gap, .5em)
+}
+
+.bodyloom-widget-icon-list-item:not(:last-child) {
+    padding-bottom: var(--bodyloom-icon-list-items-gap, .5em)
+}
+
+.bodyloom-widget-icon-list-item:after {
+    border-top: var(--bodyloom-icon-list-items-divider-weight, 1px) var(--bodyloom-icon-list-items-divider-style, solid) var(--bodyloom-icon-list-items-divider-color, var(--bodyloom-colors-bd));
+    width: var(--bodyloom-icon-list-items-divider-width, 100%);
+    position: absolute;
+    bottom: calc(-1 * var(--bodyloom-icon-list-items-divider-weight, 1px) / 2)
+}
+
+.bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list-item>a {
+    display: flex;
+    align-items: var(--bodyloom-icon-list-item-vertical-align, flex-start)
+}
+
+.bodyloom-widget-icon-list-item>a .bodyloom-widget-icon-list-item-text-inner .bodyloom-widget-icon-list-item-value {
+    color: var(--bodyloom-icon-list-item-value-link-color, var(--bodyloom-icon-list-item-link-color, var(--bodyloom-colors-link)))
+}
+
+.bodyloom-widget-icon-list-item>a .bodyloom-widget-icon-list-item-text-inner .bodyloom-widget-icon-list-item-value:hover {
+    color: var(--bodyloom-icon-list-item-value-link-hover-color, var(--bodyloom-icon-list-item-link-hover-color, var(--bodyloom-colors-hover)))
+}
+
+.bodyloom-widget-icon-list-item-text-wrap {
+    display: flex;
+    align-items: center
+}
+
+.bodyloom-widget-icon-list-item-icon {
+    font-size: var(--bodyloom-icon-list-item-icon-size, 1em);
+    line-height: inherit;
+    display: inline-flex;
+    align-self: flex-start;
+    justify-content: var(--bodyloom-icon-list-item-icon-alignment);
+    flex-shrink: 0;
+}
+
+.bodyloom-widget-icon-list-item-icon>span {
+    line-height: inherit;
+    transform: var(--bodyloom-icon-list-item-icon-rotate, 0deg);
+    transition: transform .3s ease
+}
+
+.bodyloom-widget-icon-list-item-icon i {
+    color: inherit;
+    width: 1em;
+    transition: color .3s ease
+}
+
+.bodyloom-widget-icon-list-item-icon svg {
+    width: 1em;
+    height: auto;
+    fill: var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link));
+    transition: fill .3s ease
+}
+
+.bodyloom-widget-icon-list-item-icon img {
+    width: 1em;
+    height: auto;
+    transition: width .3s ease
+}
+
+.bodyloom-widget-icon-list-item-icon+.bodyloom-widget-icon-list-item-text-inner {
+    padding-left: var(--bodyloom-icon-list-item-text-indent, 10px)
+}
+
+.bodyloom-widget-icon-list-item-text-inner {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: auto
+}
+
+.bodyloom-value-position-inline .bodyloom-widget-icon-list-item-text-inner {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 0.5em
+}
+
+.bodyloom-value-position-bottom .bodyloom-widget-icon-list-item-text-inner {
+    flex-direction: column
+}
+
+.bodyloom-widget-icon-list-item-text-inner:not(.active-link-item) {
+    color: var(--bodyloom-icon-list-item-color, var(--bodyloom-colors-text));
+    transition: color .3s ease
+}
+
+.bodyloom-widget-icon-list-item-text-inner>span a {
+    color: var(--bodyloom-icon-list-item-link-color, var(--bodyloom-colors-link));
+    transition: color .3s ease
+}
+
+.bodyloom-widget-icon-list-item-text-inner .bodyloom-widget-icon-list-item-value:not(.active-link-item) {
+    color: var(--bodyloom-icon-list-item-value-color, var(--bodyloom-icon-list-item-color, var(--bodyloom-colors-text)))
+}
+
+.bodyloom-widget-icon-list-item-text-inner .bodyloom-widget-icon-list-item-value>a {
+    color: var(--bodyloom-icon-list-item-value-link-color, var(--bodyloom-icon-list-item-link-color, var(--bodyloom-colors-link)))
+}
+
+.bodyloom-widget-icon-list-item-text-inner .bodyloom-widget-icon-list-item-value>a:hover {
+    color: var(--bodyloom-icon-list-item-value-link-hover-color, var(--bodyloom-icon-list-item-link-hover-color, var(--bodyloom-colors-hover)))
+}
+
+.bodyloom-widget-icon-list-item-value:not(.active-link-item) {
+    color: var(--bodyloom-icon-list-item-value-color, var(--bodyloom-icon-list-item-color, var(--bodyloom-colors-text)))
+}
+
+.bodyloom-widget-icon-list-item-value>a {
+    color: var(--bodyloom-icon-list-item-value-link-color, var(--bodyloom-icon-list-item-link-color, var(--bodyloom-colors-link)))
+}
+
+.bodyloom-widget-icon-list-item-value>a:hover {
+    color: var(--bodyloom-icon-list-item-value-link-hover-color, var(--bodyloom-icon-list-item-link-hover-color, var(--bodyloom-colors-hover)))
+}
+
+.bodyloom-value-position-bottom .bodyloom-widget-icon-list-item-value,
+.bodyloom-widget-layout-row .bodyloom-widget-icon-list-item-value {
+    padding-left: 0
+}
+
+.bodyloom-widget-icon-list-item-value:not(.active-link-item),
+.bodyloom-widget-icon-list-item-value>a {
+    transition: color .3s ease
+}
+
+.bodyloom-widget-icon-list-item>a .bodyloom-widget-icon-list-item-text-inner {
+    color: var(--bodyloom-icon-list-item-link-color, var(--bodyloom-colors-link))
+}
+
+.bodyloom-widget-icon-list-item>a .bodyloom-widget-icon-list-item-value {
+    color: var(--bodyloom-icon-list-item-value-link-color, var(--bodyloom-icon-list-item-link-color, var(--bodyloom-colors-link)))
+}
+
+.bodyloom-widget-icon-list-item>a:hover .bodyloom-widget-icon-list-item-text-inner {
+    color: var(--bodyloom-icon-list-item-link-hover-color, var(--bodyloom-colors-hover))
+}
+
+.bodyloom-widget-icon-list-item>a:hover .bodyloom-widget-icon-list-item-value {
+    color: var(--bodyloom-icon-list-item-value-link-hover-color, var(--bodyloom-icon-list-item-link-hover-color, var(--bodyloom-colors-hover)))
+}
+
+.bodyloom-widget-icon-list-item:not(.active-link-item) .bodyloom-widget-icon-list-item-text>a:hover {
+    color: var(--bodyloom-icon-list-item-link-hover-color, var(--bodyloom-colors-hover))
+}
+
+.bodyloom-widget-icon-list-item:not(.active-link-item):hover .bodyloom-widget-icon-list-item-text-inner:not(.active-link-item) {
+    color: var(--bodyloom-icon-list-item-hover-color, var(--bodyloom-icon-list-item-color, var(--bodyloom-colors-text)))
+}
+
+.bodyloom-widget-icon-list-item:not(.active-link-item):hover .bodyloom-widget-icon-list-item-value:not(.active-link-item) {
+    color: var(--bodyloom-icon-list-item-value-hover-color, var(--bodyloom-icon-list-item-value-color, var(--bodyloom-icon-list-item-hover-color, var(--bodyloom-icon-list-item-color, var(--bodyloom-colors-text)))))
+}
+
+.bodyloom-widget-icon-list-item:hover .bodyloom-widget-icon-list-item-icon>span {
+    color: var(--bodyloom-icon-list-item-icon-hover-color, var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link)));
+    transform: var(--bodyloom-icon-list-item-icon-rotate-hover, var(--bodyloom-icon-list-item-icon-rotate, 0deg))
+}
+
+.bodyloom-widget-icon-list-item:hover .bodyloom-widget-icon-list-item-icon svg {
+    fill: var(--bodyloom-icon-list-item-icon-hover-color, var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link)))
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-shape-circle {
+    --bodyloom-icon-list-item-icon-border-radius: var(--bodyloom-icon-list-item-icon-wrapper, 50px)
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-stacked .bodyloom-widget-icon-list-item-icon>span {
+    color: var(--bodyloom-icon-list-item-icon-secondary-color, var(--bodyloom-colors-heading));
+    background-color: var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link));
+    border-radius: var(--bodyloom-icon-list-item-icon-border-radius, 0);
+    line-height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--bodyloom-icon-list-item-icon-wrapper, 40px);
+    min-height: var(--bodyloom-icon-list-item-icon-wrapper, 40px);
+    padding: var(--bodyloom-icon-list-item-icon-padding, 0);
+    transition: background-color .3s ease, transform .3s ease
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-stacked .bodyloom-widget-icon-list-item-icon i {
+    text-align: var(--bodyloom-icon-list-item-icon-alignment)
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-stacked .bodyloom-widget-icon-list-item-icon svg {
+    fill: var(--bodyloom-icon-list-item-icon-secondary-color, var(--bodyloom-colors-heading))
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-stacked .bodyloom-widget-icon-list-item:hover .bodyloom-widget-icon-list-item-icon>span {
+    color: var(--bodyloom-icon-list-item-icon-hover-secondary-color, var(--bodyloom-icon-list-item-icon-secondary-color, var(--bodyloom-colors-heading)));
+    background-color: var(--bodyloom-icon-list-item-icon-hover-color, var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link)))
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-stacked .bodyloom-widget-icon-list-item:hover .bodyloom-widget-icon-list-item-icon svg {
+    fill: var(--bodyloom-icon-list-item-icon-hover-secondary-color, var(--bodyloom-icon-list-item-icon-secondary-color, var(--bodyloom-colors-heading)))
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-framed .bodyloom-widget-icon-list-item-icon>span {
+    color: var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link));
+    background-color: var(--bodyloom-icon-list-item-icon-secondary-color, transparent);
+    border: var(--bodyloom-icon-list-item-icon-border-width, 2px) solid var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link));
+    border-radius: var(--bodyloom-icon-list-item-icon-border-radius, 0);
+    line-height: calc(1em - var(--bodyloom-icon-list-item-icon-border-width, 2px) * 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--bodyloom-icon-list-item-icon-wrapper, 40px);
+    min-height: var(--bodyloom-icon-list-item-icon-wrapper, 40px);
+    padding: var(--bodyloom-icon-list-item-icon-padding, 0);
+    transition: background-color .3s ease, border-color .3s ease, transform .3s ease
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-framed .bodyloom-widget-icon-list-item-icon i {
+    text-align: var(--bodyloom-icon-list-item-icon-alignment)
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-framed .bodyloom-widget-icon-list-item-icon svg {
+    fill: var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link))
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-framed .bodyloom-widget-icon-list-item:hover .bodyloom-widget-icon-list-item-icon>span {
+    color: var(--bodyloom-icon-list-item-icon-hover-color, var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link)));
+    background-color: var(--bodyloom-icon-list-item-icon-hover-secondary-color, var(--bodyloom-icon-list-item-icon-secondary-color, transparent));
+    border-color: var(--bodyloom-icon-list-item-icon-hover-color, var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link)))
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-view-framed .bodyloom-widget-icon-list-item:hover .bodyloom-widget-icon-list-item-icon svg {
+    fill: var(--bodyloom-icon-list-item-icon-hover-color, var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link)))
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-element-numeric .bodyloom-widget-icon-list-items {
+    counter-reset: iconListCounter
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-element-numeric .bodyloom-widget-icon-list-item {
+    counter-increment: iconListCounter
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-element-numeric .bodyloom-widget-icon-list-item-icon>span {
+    text-align: center
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-element-numeric .bodyloom-widget-icon-list-item-icon>span:before {
+    content: var(--bodyloom-icon-list-item-counter-prefix, "") counter(iconListCounter, var(--bodyloom-icon-list-item-counter-type, decimal)) var(--bodyloom-icon-list-item-counter-suffix, "");
+    padding: var(--bodyloom-icon-list-item-icon-padding, 0)
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-element-numeric.bodyloom-widget-marker-view-framed .bodyloom-widget-icon-list-item-icon>span,
+.bodyloom-widget-icon-list.bodyloom-widget-marker-element-numeric.bodyloom-widget-marker-view-stacked .bodyloom-widget-icon-list-item-icon>span {
+    line-height: var(--bodyloom-icon-list-item-icon-wrapper, 40px);
+    min-width: var(--bodyloom-icon-list-item-icon-wrapper, 40px);
+    min-height: var(--bodyloom-icon-list-item-icon-wrapper, 40px)
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-element-numeric.bodyloom-widget-marker-view-framed .bodyloom-widget-icon-list-item-icon>span:before,
+.bodyloom-widget-icon-list.bodyloom-widget-marker-element-numeric.bodyloom-widget-marker-view-stacked .bodyloom-widget-icon-list-item-icon>span:before {
+    line-height: inherit
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-marker-element-numeric.bodyloom-widget-marker-view-framed .bodyloom-widget-icon-list-item-icon>span {
+    line-height: calc(var(--bodyloom-icon-list-item-icon-wrapper, 50px) - var(--bodyloom-icon-list-item-icon-border-width, 2px) * 2)
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item-text-wrap {
+    flex-direction: row-reverse;
+    text-align: end
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item-icon {
+    text-align: var(--bodyloom-icon-list-item-icon-alignment, right)
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item-icon+.bodyloom-widget-icon-list-item-text-inner {
+    padding-left: 0;
+    padding-right: var(--bodyloom-icon-list-item-text-indent, 10px)
+}
+
+.bodyloom-widget-layout-row.bodyloom-widget-icon-list.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item-value {
+    padding-left: 0
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row .bodyloom-widget-icon-list-item>a {
+    justify-content: space-between
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-center .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-center .bodyloom-widget-icon-list-item>a {
+    justify-content: center;
+    text-align: center
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-center .bodyloom-widget-icon-list-item:after {
+    margin: auto
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-left .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-left .bodyloom-widget-icon-list-item>a {
+    justify-content: flex-start;
+    text-align: left
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-right .bodyloom-widget-icon-list-items {
+    justify-content: flex-end
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-right .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-right .bodyloom-widget-icon-list-item>a {
+    justify-content: flex-end;
+    text-align: right
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item>a {
+    justify-content: space-between
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row:not(.bodyloom-widget-align-right) .bodyloom-widget-icon-list-item:after {
+    left: 0
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row:not(.bodyloom-widget-align-left) .bodyloom-widget-icon-list-item:after {
+    right: 0
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item>a {
+    flex-direction: row-reverse;
+    text-align: end
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item-value {
+    padding-right: var(--bodyloom-icon-list-item-value-indent, 20px)
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-align-left .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-align-left .bodyloom-widget-icon-list-item>a {
+    justify-content: flex-end;
+    text-align: right
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-align-right .bodyloom-widget-icon-list-items {
+    justify-content: flex-start
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-align-right .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-align-right .bodyloom-widget-icon-list-item>a {
+    justify-content: flex-start;
+    text-align: left
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse:not(.bodyloom-widget-align-right) .bodyloom-widget-icon-list-item:after {
+    left: auto;
+    right: 0
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse:not(.bodyloom-widget-align-left) .bodyloom-widget-icon-list-item:after {
+    right: auto;
+    left: 0
+}
+
+@media (max-width:1024px) {
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row .bodyloom-widget-icon-list-item>a {
+        flex-direction: row;
+        justify-content: space-between
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row .bodyloom-widget-icon-list-item-value {
+        padding-left: var(--bodyloom-icon-list-item-value-indent, 20px);
+        padding-top: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-center .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-center .bodyloom-widget-icon-list-item>a,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-center .bodyloom-widget-icon-list-items {
+        justify-content: center
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-center .bodyloom-widget-icon-list-item:after {
+        margin: auto
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-left .bodyloom-widget-icon-list-items {
+        justify-content: flex-start
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-left .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-left .bodyloom-widget-icon-list-item>a {
+        justify-content: flex-start;
+        text-align: left
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-right .bodyloom-widget-icon-list-items {
+        justify-content: flex-end
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-right .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-right .bodyloom-widget-icon-list-item>a {
+        justify-content: flex-end;
+        text-align: right
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item>a {
+        justify-content: space-between
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row:not(.bodyloom-widget-tablet-align-right) .bodyloom-widget-icon-list-item:after {
+        left: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row:not(.bodyloom-widget-tablet-align-left) .bodyloom-widget-icon-list-item:after {
+        right: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item>a {
+        flex-direction: row-reverse;
+        text-align: end
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item-value {
+        padding-right: var(--bodyloom-icon-list-item-value-indent, 20px)
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-tablet-align-left .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-tablet-align-left .bodyloom-widget-icon-list-item>a {
+        justify-content: flex-end;
+        text-align: right
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-tablet-align-right .bodyloom-widget-icon-list-items {
+        justify-content: flex-start
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-tablet-align-right .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-tablet-align-right .bodyloom-widget-icon-list-item>a {
+        justify-content: flex-start;
+        text-align: left
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse:not(.bodyloom-widget-tablet-align-right) .bodyloom-widget-icon-list-item:after {
+        left: auto;
+        right: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse:not(.bodyloom-widget-tablet-align-left) .bodyloom-widget-icon-list-item:after {
+        right: auto;
+        left: 0
+    }
+}
+
+@media (max-width:767px) {
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row .bodyloom-widget-icon-list-item>a {
+        flex-direction: row;
+        justify-content: space-between
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row .bodyloom-widget-icon-list-item-value {
+        padding-left: var(--bodyloom-icon-list-item-value-indent, 20px);
+        padding-top: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-center .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-center .bodyloom-widget-icon-list-item>a,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-center .bodyloom-widget-icon-list-items {
+        justify-content: center
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-center .bodyloom-widget-icon-list-item:after {
+        margin: auto
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-left .bodyloom-widget-icon-list-items {
+        justify-content: flex-start
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-left .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-left .bodyloom-widget-icon-list-item>a {
+        justify-content: flex-start;
+        text-align: left
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-right .bodyloom-widget-icon-list-items {
+        justify-content: flex-end
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-right .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-right .bodyloom-widget-icon-list-item>a {
+        justify-content: flex-end;
+        text-align: right
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item>a {
+        justify-content: space-between
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row:not(.bodyloom-widget-mobile-align-right) .bodyloom-widget-icon-list-item:after {
+        left: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row:not(.bodyloom-widget-mobile-align-left) .bodyloom-widget-icon-list-item:after {
+        right: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item>a {
+        flex-direction: row-reverse;
+        text-align: end
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: var(--bodyloom-icon-list-item-value-indent, 20px)
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-mobile-align-left .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-mobile-align-left .bodyloom-widget-icon-list-item>a {
+        justify-content: flex-end;
+        text-align: right
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-mobile-align-right .bodyloom-widget-icon-list-items {
+        justify-content: flex-start
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-mobile-align-right .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse.bodyloom-widget-mobile-align-right .bodyloom-widget-icon-list-item>a {
+        justify-content: flex-start;
+        text-align: left
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse:not(.bodyloom-widget-mobile-align-right) .bodyloom-widget-icon-list-item:after {
+        left: auto;
+        right: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-direction-reverse:not(.bodyloom-widget-mobile-align-left) .bodyloom-widget-icon-list-item:after {
+        right: auto;
+        left: 0
+    }
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column .bodyloom-widget-icon-list-item>a {
+    flex-direction: column;
+    justify-content: flex-start
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column .bodyloom-widget-icon-list-item-value {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: var(--bodyloom-icon-list-item-value-gap, 5px)
+}
+
+.bodyloom-value-position-inline .bodyloom-widget-icon-list.bodyloom-widget-layout-column .bodyloom-widget-icon-list-item:not(.active-icon-item) .bodyloom-widget-icon-list-item-value {
+    padding-top: var(--bodyloom-icon-list-item-value-indent, 0)
+}
+
+.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-left .bodyloom-widget-icon-list-item-value,
+.bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-left .bodyloom-widget-icon-list-item-value {
+    text-align: left
+}
+
+.bodyloom-widget-direction-default.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-left .bodyloom-widget-icon-list-item-value {
+    padding-left: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-size, 1em)));
+    padding-right: 0
+}
+
+.bodyloom-widget-direction-default:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-left .bodyloom-widget-icon-list-item-value {
+    padding-left: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-wrapper, 40px)));
+    padding-right: 0
+}
+
+.bodyloom-widget-direction-reverse.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-left .bodyloom-widget-icon-list-item-value {
+    padding-left: var(--bodyloom-icon-list-item-value-indent, 0);
+    padding-right: 0
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-left .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-left .bodyloom-widget-icon-list-item>a {
+    align-items: flex-start
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-center .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-center .bodyloom-widget-icon-list-item>a {
+    align-items: center
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-center .bodyloom-widget-icon-list-item-text-inner,
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-center .bodyloom-widget-icon-list-item-value {
+    text-align: center
+}
+
+.bodyloom-widget-direction-default.bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-center .bodyloom-widget-icon-list-item-value {
+    text-align: left
+}
+
+.bodyloom-widget-direction-reverse.bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-center .bodyloom-widget-icon-list-item-value {
+    text-align: right
+}
+
+.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-center .bodyloom-widget-icon-list-item-value {
+    text-align: center
+}
+
+.bodyloom-widget-direction-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-center .bodyloom-widget-icon-list-item-value,
+.bodyloom-widget-direction-reverse.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-center .bodyloom-widget-icon-list-item-value {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-right .bodyloom-widget-icon-list-item-value,
+.bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-right .bodyloom-widget-icon-list-item-value {
+    text-align: right
+}
+
+.bodyloom-widget-direction-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-right .bodyloom-widget-icon-list-item-value {
+    padding-left: 0;
+    padding-right: var(--bodyloom-icon-list-item-value-indent, 0)
+}
+
+.bodyloom-widget-direction-reverse.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-right .bodyloom-widget-icon-list-item-value {
+    padding-left: 0;
+    padding-right: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-size, 1em)))
+}
+
+.bodyloom-widget-direction-reverse:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-right .bodyloom-widget-icon-list-item-value {
+    padding-left: 0;
+    padding-right: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-wrapper, 40px)))
+}
+
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-right .bodyloom-widget-icon-list-item:not(.active-link-item),
+.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-align-column-right .bodyloom-widget-icon-list-item>a {
+    align-items: flex-end
+}
+
+@media (max-width:1024px) {
+
+    .bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item-value,
+    .bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item-value {
+        text-align: left
+    }
+
+    .bodyloom-widget-direction-default.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item-value {
+        padding-left: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-size, 1em)));
+        padding-right: 0
+    }
+
+    .bodyloom-widget-direction-default:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item-value {
+        padding-left: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-wrapper, 40px)));
+        padding-right: 0
+    }
+
+    .bodyloom-widget-direction-reverse.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-reverse:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item-value {
+        padding-left: var(--bodyloom-icon-list-item-value-indent, 0);
+        padding-right: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item>a {
+        align-items: flex-start
+    }
+
+    .bodyloom-widget-direction-default.bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item-text-inner,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-left .bodyloom-widget-icon-list-item-value {
+        text-align: left
+    }
+
+    .bodyloom-widget-direction-reverse.bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item-value {
+        text-align: right
+    }
+
+    .bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item-value {
+        text-align: center
+    }
+
+    .bodyloom-widget-direction-default.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-default:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-reverse.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-reverse:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item>a {
+        align-items: center
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item-text-inner,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-center .bodyloom-widget-icon-list-item-value {
+        text-align: center
+    }
+
+    .bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item-value,
+    .bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item-value {
+        text-align: right
+    }
+
+    .bodyloom-widget-direction-default.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-default:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: var(--bodyloom-icon-list-item-value-indent, 0)
+    }
+
+    .bodyloom-widget-direction-reverse.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-size, 1em)))
+    }
+
+    .bodyloom-widget-direction-reverse:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-wrapper, 40px)))
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item>a {
+        align-items: flex-end
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item-text-inner,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item-value {
+        text-align: left
+    }
+
+    .bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-tablet-align-column-right .bodyloom-widget-icon-list-item:not(.active-icon-item) .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: var(--bodyloom-icon-list-item-value-indent, 0)
+    }
+}
+
+@media (max-width:767px) {
+
+    .bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item-value,
+    .bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item-value {
+        text-align: left
+    }
+
+    .bodyloom-widget-direction-default.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item-value {
+        padding-left: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-size, 1em)));
+        padding-right: 0
+    }
+
+    .bodyloom-widget-direction-default:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item-value {
+        padding-left: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-wrapper, 40px)));
+        padding-right: 0
+    }
+
+    .bodyloom-widget-direction-reverse.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-reverse:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item-value {
+        padding-left: var(--bodyloom-icon-list-item-value-indent, 0);
+        padding-right: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item>a {
+        align-items: flex-start
+    }
+
+    .bodyloom-widget-direction-default.bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item-text-inner,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-left .bodyloom-widget-icon-list-item-value {
+        text-align: left
+    }
+
+    .bodyloom-widget-direction-reverse.bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item-value {
+        text-align: right
+    }
+
+    .bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item-value {
+        text-align: center
+    }
+
+    .bodyloom-widget-direction-default.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-default:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-reverse.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-reverse:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item>a {
+        align-items: center
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item-text-inner,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-center .bodyloom-widget-icon-list-item-value {
+        text-align: center
+    }
+
+    .bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item-value,
+    .bodyloom-value-position-inline.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item-value {
+        text-align: right
+    }
+
+    .bodyloom-widget-direction-default.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item-value,
+    .bodyloom-widget-direction-default:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: var(--bodyloom-icon-list-item-value-indent, 0)
+    }
+
+    .bodyloom-widget-direction-reverse.bodyloom-widget-marker-view-default.bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-size, 1em)))
+    }
+
+    .bodyloom-widget-direction-reverse:not(.bodyloom-widget-marker-view-default).bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: var(--bodyloom-icon-list-item-value-indent, calc(var(--bodyloom-icon-list-item-text-indent, 10px) + var(--bodyloom-icon-list-item-icon-wrapper, 40px)))
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item:not(.active-link-item),
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item>a {
+        align-items: flex-end
+    }
+
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item-text-inner,
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item-value {
+        text-align: left
+    }
+
+    .bodyloom-value-position-bottom.bodyloom-widget-icon-list.bodyloom-widget-layout-column.bodyloom-widget-mobile-align-column-right .bodyloom-widget-icon-list-item:not(.active-icon-item) .bodyloom-widget-icon-list-item-value {
+        padding-left: 0;
+        padding-right: var(--bodyloom-icon-list-item-value-indent, 0)
+    }
+}

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bodyloom/dynamic-icon-list",
+  "version": "1.0.0",
+  "title": "Bodyloom Icon List",
+  "category": "widgets",
+  "icon": "list-view",
+  "description": "A dynamic icon list block supporting ACF, Pods, and Meta Box.",
+  "supports": {
+    "html": false,
+    "align": true,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "bodyloom-dynamic-icon-list",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "title_tag": {
+      "type": "string",
+      "default": "h3"
+    },
+    "data_type": {
+      "type": "string",
+      "default": "static"
+    },
+    "acf_repeater_field_name": {
+      "type": "string",
+      "default": ""
+    },
+    "dynamic_text_sub_field": {
+      "type": "string",
+      "default": "text"
+    },
+    "dynamic_value_sub_field": {
+      "type": "string",
+      "default": "value"
+    },
+    "dynamic_link_sub_field": {
+      "type": "string",
+      "default": "link"
+    },
+    "link_click": {
+      "type": "string",
+      "default": "text"
+    },
+    "item_layout": {
+      "type": "string",
+      "default": "row"
+    },
+    "global_marker": {
+      "type": "string",
+      "default": "icon"
+    },
+    "marker_view": {
+      "type": "string",
+      "default": "default"
+    },
+    "columns": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "style": "bodyloom-dynamic-icon-list",
+  "render": "file:./render.php"
+}

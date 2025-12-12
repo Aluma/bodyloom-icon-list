@@ -1,0 +1,39 @@
+Installation Instructions
+
+1. Upload the `bodyloom-dynamic-icon-list` folder to the `/wp-content/plugins/` directory.
+2. Activate the plugin through the 'Plugins' menu in WordPress.
+3. Ensure you have one of the supported custom field plugins installed and active:
+   - Advanced Custom Fields (ACF) Pro
+   - Meta Box
+   - Pods
+
+Usage
+
+Elementor:
+1. Open a page in Elementor.
+2. Drag the "Bodyloom Icon List" widget to the page.
+3. Select "Dynamic" as the Data Type.
+4. Enter the ACF Repeater Field Name.
+5. Specify the sub-field keys for Text, Value, and Link.
+6. Configure styles and options (Layout, Icon, Colors, etc.).
+
+Gutenberg (Block):
+1. In the block editor, search for "Icon List".
+2. Add the block to your page.
+3. In the block settings, configure the dynamic data source (ACF Repeater Name, sub-fields).
+4. Configure layout and style options.
+
+Shortcode:
+Use the `[bodyloom_icon_list]` shortcode in any content area.
+
+Parameters:
+- `data_type`: 'dynamic' (default) or 'static'.
+- `source`: 'acf' (default), 'metabox', or 'pods'.
+- `acf_repeater_field_name`: The name of the repeater field.
+- `dynamic_text_sub_field`: Sub-field name for text (default: 'text').
+- `dynamic_value_sub_field`: Sub-field name for value (default: 'value').
+- `dynamic_link_sub_field`: Sub-field name for link (default: 'link').
+- `title`: Optional title for the list.
+
+Example:
+[bodyloom_icon_list acf_repeater_field_name="my_services" dynamic_text_sub_field="service_name" dynamic_value_sub_field="price"]
