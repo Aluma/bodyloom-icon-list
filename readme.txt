@@ -1,6 +1,6 @@
 === Bodyloom Icon List ===
 Contributors: Jimmy Thanki
-Tags: icon list, acf, metabox, pods, elementor, gutenberg
+Tags: icon list, acf, metabox, pods, elementor
 Requires at least: 5.0
 Tested up to: 6.7
 Stable tag: 1.0.0
