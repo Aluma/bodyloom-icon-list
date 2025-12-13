@@ -6,7 +6,7 @@
  * Author: Jimmy Thanki
  * Author URI: https://bodyloom.com
  * License: GPLv2 or later
- * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: bodyloom-dynamic-icon-list
  * Domain Path: /languages
  */

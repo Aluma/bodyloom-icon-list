@@ -175,25 +175,26 @@ class Icon_List_Widget extends Widget_Base
     {
         $this->start_controls_section(
             'section_list',
-            ['label' => __('Icon List', 'bodyloom-elementor')]
+            ['label' => __('Icon List', 'bodyloom-dynamic-icon-list')]
         );
 
         $this->add_control(
             'data_type',
             [
-                'label' => __('Data Type', 'bodyloom-elementor'),
+                'label' => __('Data Type', 'bodyloom-dynamic-icon-list'),
                 'label_block' => false,
                 'type' => 'choose_text',
                 'options' => [
                     'static' => [
-                        'title' => __('Static', 'bodyloom-elementor'),
+                        'title' => __('Static', 'bodyloom-dynamic-icon-list'),
                     ],
                     'dynamic' => [
-                        'title' => __('Dynamic', 'bodyloom-elementor'),
+                        'title' => __('Dynamic', 'bodyloom-dynamic-icon-list'),
                     ],
                 ],
                 'default' => 'static',
                 'toggle' => false,
+                'render_type' => 'template',
             ]
         );
 
@@ -204,7 +205,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'items_heading',
             [
-                'label' => __('Items', 'bodyloom-elementor'),
+                'label' => __('Items', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -213,43 +214,44 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'item_layout',
             [
-                'label' => __('Layout', 'bodyloom-elementor'),
+                'label' => __('Layout', 'bodyloom-dynamic-icon-list'),
                 'label_block' => false,
                 'type' => 'choose_text',
                 'options' => [
                     'row' => [
-                        'title' => __('Row', 'bodyloom-elementor'),
+                        'title' => __('Row', 'bodyloom-dynamic-icon-list'),
                     ],
                     'column' => [
-                        'title' => __('Column', 'bodyloom-elementor'),
+                        'title' => __('Column', 'bodyloom-dynamic-icon-list'),
                     ],
                 ],
                 'default' => 'row',
                 'toggle' => false,
                 'prefix_class' => 'bodyloom-widget-layout-',
+                'render_type' => 'template',
             ]
         );
 
         $this->add_responsive_control(
             'items_align',
             [
-                'label' => __('Alignment', 'bodyloom-elementor'),
+                'label' => __('Alignment', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __('Left', 'bodyloom-elementor'),
+                        'title' => __('Left', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'center' => [
-                        'title' => __('Center', 'bodyloom-elementor'),
+                        'title' => __('Center', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-center',
                     ],
                     'right' => [
-                        'title' => __('Right', 'bodyloom-elementor'),
+                        'title' => __('Right', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-right',
                     ],
                     'stretch' => [
-                        'title' => __('Stretch', 'bodyloom-elementor'),
+                        'title' => __('Stretch', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-stretch',
                     ],
                 ],
@@ -257,25 +259,26 @@ class Icon_List_Widget extends Widget_Base
                 'toggle' => false,
                 'prefix_class' => 'bodyloom-widget%s-align-',
                 'condition' => ['item_layout' => 'row'],
+                'render_type' => 'template',
             ]
         );
 
         $this->add_responsive_control(
             'items_align_column',
             [
-                'label' => __('Alignment', 'bodyloom-elementor'),
+                'label' => __('Alignment', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __('Left', 'bodyloom-elementor'),
+                        'title' => __('Left', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'center' => [
-                        'title' => __('Center', 'bodyloom-elementor'),
+                        'title' => __('Center', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-center',
                     ],
                     'right' => [
-                        'title' => __('Right', 'bodyloom-elementor'),
+                        'title' => __('Right', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
@@ -283,33 +286,35 @@ class Icon_List_Widget extends Widget_Base
                 'toggle' => false,
                 'prefix_class' => 'bodyloom-widget%s-align-column-',
                 'condition' => ['item_layout' => 'column'],
+                'render_type' => 'template',
             ]
         );
 
         $this->add_control(
             'item_direction',
             [
-                'label' => __('Direction', 'bodyloom-elementor'),
+                'label' => __('Direction', 'bodyloom-dynamic-icon-list'),
                 'label_block' => false,
                 'type' => 'choose_text',
                 'options' => [
                     'default' => [
-                        'title' => __('Default', 'bodyloom-elementor'),
+                        'title' => __('Default', 'bodyloom-dynamic-icon-list'),
                     ],
                     'reverse' => [
-                        'title' => __('Reverse', 'bodyloom-elementor'),
+                        'title' => __('Reverse', 'bodyloom-dynamic-icon-list'),
                     ],
                 ],
                 'default' => 'default',
                 'toggle' => false,
                 'prefix_class' => 'bodyloom-widget-direction-',
+                'render_type' => 'template',
             ]
         );
 
         $this->add_control(
             'value_heading',
             [
-                'label' => __('Value', 'bodyloom-elementor'),
+                'label' => __('Value', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -318,14 +323,14 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'value_position',
             [
-                'label' => __('Position', 'bodyloom-elementor'),
+                'label' => __('Position', 'bodyloom-dynamic-icon-list'),
                 'type' => 'choose_text',
                 'options' => [
                     'bottom' => [
-                        'title' => __('Bottom', 'bodyloom-elementor'),
+                        'title' => __('Bottom', 'bodyloom-dynamic-icon-list'),
                     ],
                     'inline' => [
-                        'title' => __('Inline', 'bodyloom-elementor'),
+                        'title' => __('Inline', 'bodyloom-dynamic-icon-list'),
                     ],
                 ],
                 'default' => 'bottom',
@@ -333,13 +338,14 @@ class Icon_List_Widget extends Widget_Base
                 'toggle' => false,
 
                 'prefix_class' => 'bodyloom-value-position-',
+                'render_type' => 'template',
             ]
         );
 
         $this->add_control(
             'marker_heading',
             [
-                'label' => __('Marker', 'bodyloom-elementor'),
+                'label' => __('Marker', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -348,27 +354,28 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'global_marker',
             [
-                'label' => __('Type', 'bodyloom-elementor'),
+                'label' => __('Type', 'bodyloom-dynamic-icon-list'),
                 'label_block' => false,
                 'type' => 'choose_text',
                 'options' => [
                     'icon' => [
-                        'title' => __('Icon', 'bodyloom-elementor'),
+                        'title' => __('Icon', 'bodyloom-dynamic-icon-list'),
                     ],
                     'numeric' => [
-                        'title' => __('Numeric', 'bodyloom-elementor'),
+                        'title' => __('Numeric', 'bodyloom-dynamic-icon-list'),
                     ],
                 ],
                 'default' => 'icon',
                 'toggle' => false,
                 'prefix_class' => 'bodyloom-widget-marker-element-',
+                'render_type' => 'template',
             ]
         );
 
         $this->add_control(
             'global_icon',
             [
-                'label' => __('Global Icon', 'bodyloom-elementor'),
+                'label' => __('Global Icon', 'bodyloom-dynamic-icon-list'),
                 'label_block' => false,
                 'type' => Controls_Manager::ICONS,
                 'default' => [
@@ -383,39 +390,40 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'marker_view',
             [
-                'label' => __('View', 'bodyloom-elementor'),
+                'label' => __('View', 'bodyloom-dynamic-icon-list'),
                 'label_block' => false,
                 'type' => 'choose_text',
                 'options' => [
                     'default' => [
-                        'title' => __('Default', 'bodyloom-elementor'),
+                        'title' => __('Default', 'bodyloom-dynamic-icon-list'),
                     ],
                     'stacked' => [
-                        'title' => __('Stacked', 'bodyloom-elementor'),
+                        'title' => __('Stacked', 'bodyloom-dynamic-icon-list'),
                     ],
                     'framed' => [
-                        'title' => __('Framed', 'bodyloom-elementor'),
+                        'title' => __('Framed', 'bodyloom-dynamic-icon-list'),
                     ],
                 ],
                 'default' => 'default',
                 'prefix_class' => 'bodyloom-widget-marker-view-',
                 'toggle' => false,
+                'render_type' => 'template',
             ]
         );
 
         $this->add_control(
             'marker_shape',
             [
-                'label' => __('Shape', 'bodyloom-elementor'),
+                'label' => __('Shape', 'bodyloom-dynamic-icon-list'),
                 'label_block' => false,
                 'type' => 'choose_text',
                 'options' => [
                     'circle' => [
-                        'title' => __('Circle', 'bodyloom-elementor'),
+                        'title' => __('Circle', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-circle-o',
                     ],
                     'square' => [
-                        'title' => __('Square', 'bodyloom-elementor'),
+                        'title' => __('Square', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-square-o',
                     ],
                 ],
@@ -423,24 +431,25 @@ class Icon_List_Widget extends Widget_Base
                 'condition' => ['marker_view!' => 'default'],
                 'prefix_class' => 'bodyloom-widget-marker-shape-',
                 'toggle' => false,
+                'render_type' => 'template',
             ]
         );
 
         $this->add_control(
             'link_click',
             [
-                'label' => __('Apply Link To:', 'bodyloom-elementor'),
+                'label' => __('Apply Link To:', 'bodyloom-dynamic-icon-list'),
                 'label_block' => true,
                 'type' => 'choose_text',
                 'options' => [
                     'text' => [
-                        'title' => __('Text', 'bodyloom-elementor'),
+                        'title' => __('Text', 'bodyloom-dynamic-icon-list'),
                     ],
                     'value' => [
-                        'title' => __('Value', 'bodyloom-elementor'),
+                        'title' => __('Value', 'bodyloom-dynamic-icon-list'),
                     ],
                     'full_width' => [
-                        'title' => __('Full Width', 'bodyloom-elementor'),
+                        'title' => __('Full Width', 'bodyloom-dynamic-icon-list'),
                     ],
                 ],
                 'default' => 'text',
@@ -453,7 +462,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'title_heading',
             [
-                'label' => __('Title', 'bodyloom-elementor'),
+                'label' => __('Title', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -462,7 +471,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'title',
             [
-                'label' => __('Title', 'bodyloom-elementor'),
+                'label' => __('Title', 'bodyloom-dynamic-icon-list'),
                 'label_block' => true,
                 'show_label' => false,
                 'type' => Controls_Manager::TEXT,
@@ -473,7 +482,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'title_tag',
             [
-                'label' => __('HTML Tag', 'bodyloom-elementor'),
+                'label' => __('HTML Tag', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'h1' => 'H1',
@@ -488,6 +497,7 @@ class Icon_List_Widget extends Widget_Base
                 ],
                 'default' => 'h3',
                 'condition' => ['title!' => ''],
+                'render_type' => 'template',
             ]
         );
 
@@ -508,7 +518,7 @@ class Icon_List_Widget extends Widget_Base
         $repeater->add_control(
             'text',
             [
-                'label' => __('Text', 'bodyloom-elementor'),
+                'label' => __('Text', 'bodyloom-dynamic-icon-list'),
                 'label_block' => true,
                 'type' => Controls_Manager::TEXT,
                 'dynamic' => ['active' => true],
@@ -518,7 +528,7 @@ class Icon_List_Widget extends Widget_Base
         $repeater->add_control(
             'value',
             [
-                'label' => __('Value', 'bodyloom-elementor'),
+                'label' => __('Value', 'bodyloom-dynamic-icon-list'),
                 'label_block' => true,
                 'type' => Controls_Manager::TEXT,
                 'dynamic' => ['active' => true],
@@ -528,7 +538,7 @@ class Icon_List_Widget extends Widget_Base
         $repeater->add_control(
             'link',
             [
-                'label' => __('Link', 'bodyloom-elementor'),
+                'label' => __('Link', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::URL,
                 'dynamic' => ['active' => true],
             ]
@@ -537,15 +547,15 @@ class Icon_List_Widget extends Widget_Base
         $repeater->add_control(
             'icon_type',
             [
-                'label' => __('Icon Type', 'bodyloom-elementor'),
+                'label' => __('Icon Type', 'bodyloom-dynamic-icon-list'),
                 'label_block' => false,
                 'type' => 'choose_text',
                 'options' => [
                     'global' => [
-                        'title' => __('Global', 'bodyloom-elementor'),
+                        'title' => __('Global', 'bodyloom-dynamic-icon-list'),
                     ],
                     'custom' => [
-                        'title' => __('Custom', 'bodyloom-elementor'),
+                        'title' => __('Custom', 'bodyloom-dynamic-icon-list'),
                     ],
                 ],
                 'default' => 'global',
@@ -557,7 +567,7 @@ class Icon_List_Widget extends Widget_Base
         $repeater->add_control(
             'icon',
             [
-                'label' => __('Custom Icon', 'bodyloom-elementor'),
+                'label' => __('Custom Icon', 'bodyloom-dynamic-icon-list'),
                 'label_block' => false,
                 'type' => Controls_Manager::ICONS,
                 'skin' => 'inline',
@@ -568,7 +578,7 @@ class Icon_List_Widget extends Widget_Base
         $repeater->add_control(
             'text_nowrap',
             [
-                'label' => __('Prevent Text Wrapping', 'bodyloom-elementor'),
+                'label' => __('Prevent Text Wrapping', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SWITCHER,
                 'selectors_dictionary' => [
                     'yes' => 'nowrap',
@@ -576,7 +586,7 @@ class Icon_List_Widget extends Widget_Base
                 ],
                 'default' => '',
                 'render_type' => 'ui',
-                'description' => __('Display text in a single line without wrapping.', 'bodyloom-elementor'),
+                'description' => __('Display text in a single line without wrapping.', 'bodyloom-dynamic-icon-list'),
                 'selectors' => [
                     '{{WRAPPER}} .bodyloom-widget-icon-list-item-text-inner {{CURRENT_ITEM}}' => '--bodyloom-text-nowrap: {{VALUE}}',
                 ],
@@ -586,7 +596,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'icon_list',
             [
-                'label' => __('Items', 'bodyloom-elementor'),
+                'label' => __('Items', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'title_field' => '<span class="bodyloom-repeat-item-num"></span>. {{{ text }}} {{{ elementor.helpers.renderIcon( this, icon, {}, "i", "panel" ) }}}',
@@ -658,7 +668,7 @@ class Icon_List_Widget extends Widget_Base
         $this->start_controls_section(
             'section_list_style',
             [
-                'label' => __('List', 'bodyloom-elementor'),
+                'label' => __('List', 'bodyloom-dynamic-icon-list'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -666,7 +676,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'space_between',
             [
-                'label' => __('Space Between', 'bodyloom-elementor'),
+                'label' => __('Space Between', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -682,7 +692,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'columns_heading',
             [
-                'label' => __('Columns', 'bodyloom-elementor'),
+                'label' => __('Columns', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -691,7 +701,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'columns',
             [
-                'label' => __('Count', 'bodyloom-elementor'),
+                'label' => __('Count', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::NUMBER,
                 'min' => 1,
                 'max' => 6,
@@ -704,7 +714,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'columns_gap',
             [
-                'label' => __('Gap', 'bodyloom-elementor'),
+                'label' => __('Gap', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -722,14 +732,14 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'columns_rule_style',
             [
-                'label' => __('Separator Style', 'bodyloom-elementor'),
+                'label' => __('Separator Style', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    '' => __('None', 'bodyloom-elementor'),
-                    'solid' => __('Solid', 'bodyloom-elementor'),
-                    'double' => __('Double', 'bodyloom-elementor'),
-                    'dotted' => __('Dotted', 'bodyloom-elementor'),
-                    'dashed' => __('Dashed', 'bodyloom-elementor'),
+                    '' => __('None', 'bodyloom-dynamic-icon-list'),
+                    'solid' => __('Solid', 'bodyloom-dynamic-icon-list'),
+                    'double' => __('Double', 'bodyloom-dynamic-icon-list'),
+                    'dotted' => __('Dotted', 'bodyloom-dynamic-icon-list'),
+                    'dashed' => __('Dashed', 'bodyloom-dynamic-icon-list'),
                 ],
                 'selectors' => [
                     '{{WRAPPER}}' => '--bodyloom-icon-list-columns-rule-style: {{VALUE}}',
@@ -741,7 +751,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'columns_rule_weight',
             [
-                'label' => __('Separator Weight', 'bodyloom-elementor'),
+                'label' => __('Separator Weight', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -762,7 +772,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'columns_rule_color',
             [
-                'label' => __('Separator Color', 'bodyloom-elementor'),
+                'label' => __('Separator Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}}' => '--bodyloom-icon-list-columns-rule-color: {{VALUE}}',
@@ -777,10 +787,10 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'divider',
             [
-                'label' => __('Divider', 'bodyloom-elementor'),
+                'label' => __('Divider', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_off' => __('Off', 'bodyloom-elementor'),
-                'label_on' => __('On', 'bodyloom-elementor'),
+                'label_off' => __('Off', 'bodyloom-dynamic-icon-list'),
+                'label_on' => __('On', 'bodyloom-dynamic-icon-list'),
                 'separator' => 'before',
                 'selectors' => [
                     '{{WRAPPER}} .bodyloom-widget-icon-list-item:not(:last-child):after' => 'content: ""',
@@ -791,13 +801,13 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'divider_style',
             [
-                'label' => __('Style', 'bodyloom-elementor'),
+                'label' => __('Style', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'solid' => __('Solid', 'bodyloom-elementor'),
-                    'double' => __('Double', 'bodyloom-elementor'),
-                    'dotted' => __('Dotted', 'bodyloom-elementor'),
-                    'dashed' => __('Dashed', 'bodyloom-elementor'),
+                    'solid' => __('Solid', 'bodyloom-dynamic-icon-list'),
+                    'double' => __('Double', 'bodyloom-dynamic-icon-list'),
+                    'dotted' => __('Dotted', 'bodyloom-dynamic-icon-list'),
+                    'dashed' => __('Dashed', 'bodyloom-dynamic-icon-list'),
                 ],
                 'default' => 'solid',
                 'selectors' => [
@@ -810,7 +820,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'divider_weight',
             [
-                'label' => __('Weight', 'bodyloom-elementor'),
+                'label' => __('Weight', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -828,7 +838,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'divider_width',
             [
-                'label' => __('Width', 'bodyloom-elementor'),
+                'label' => __('Width', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['%', 'px'],
                 'default' => ['unit' => '%'],
@@ -842,7 +852,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'divider_color',
             [
-                'label' => __('Color', 'bodyloom-elementor'),
+                'label' => __('Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}}' => '--bodyloom-icon-list-items-divider-color: {{VALUE}}',
@@ -867,7 +877,7 @@ class Icon_List_Widget extends Widget_Base
         $this->start_controls_section(
             'section_item_style',
             [
-                'label' => __('Item', 'bodyloom-elementor'),
+                'label' => __('Item', 'bodyloom-dynamic-icon-list'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -884,13 +894,13 @@ class Icon_List_Widget extends Widget_Base
 
         $this->start_controls_tab(
             'item_normal',
-            ['label' => __('Normal', 'bodyloom-elementor')]
+            ['label' => __('Normal', 'bodyloom-dynamic-icon-list')]
         );
 
         $this->add_control(
             'item_color',
             [
-                'label' => __('Color', 'bodyloom-elementor'),
+                'label' => __('Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -902,7 +912,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'item_link_color',
             [
-                'label' => __('Link Color', 'bodyloom-elementor'),
+                'label' => __('Link Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -915,13 +925,13 @@ class Icon_List_Widget extends Widget_Base
 
         $this->start_controls_tab(
             'item_hover',
-            ['label' => __('Hover', 'bodyloom-elementor')]
+            ['label' => __('Hover', 'bodyloom-dynamic-icon-list')]
         );
 
         $this->add_control(
             'item_hover_color',
             [
-                'label' => __('Hover Color', 'bodyloom-elementor'),
+                'label' => __('Hover Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -933,7 +943,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'item_link_hover_color',
             [
-                'label' => __('Link Hover Color', 'bodyloom-elementor'),
+                'label' => __('Link Hover Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -949,7 +959,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'text_indent',
             [
-                'label' => __('Indent', 'bodyloom-elementor'),
+                'label' => __('Indent', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -974,19 +984,19 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'text_vertical_align',
             [
-                'label' => __('Vertical Alignment', 'bodyloom-elementor'),
+                'label' => __('Vertical Alignment', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'flex-start' => [
-                        'title' => __('Top', 'bodyloom-elementor'),
+                        'title' => __('Top', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-v-align-top',
                     ],
                     'center' => [
-                        'title' => __('Center', 'bodyloom-elementor'),
+                        'title' => __('Center', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-v-align-middle',
                     ],
                     'flex-end' => [
-                        'title' => __('Bottom', 'bodyloom-elementor'),
+                        'title' => __('Bottom', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-v-align-bottom',
                     ],
                 ],
@@ -1013,7 +1023,7 @@ class Icon_List_Widget extends Widget_Base
         $this->start_controls_section(
             'section_value_style',
             [
-                'label' => __('Value', 'bodyloom-elementor'),
+                'label' => __('Value', 'bodyloom-dynamic-icon-list'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -1030,13 +1040,13 @@ class Icon_List_Widget extends Widget_Base
 
         $this->start_controls_tab(
             'value_normal',
-            ['label' => __('Normal', 'bodyloom-elementor')]
+            ['label' => __('Normal', 'bodyloom-dynamic-icon-list')]
         );
 
         $this->add_control(
             'value_color',
             [
-                'label' => __('Color', 'bodyloom-elementor'),
+                'label' => __('Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1048,7 +1058,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'value_link_color',
             [
-                'label' => __('Link Color', 'bodyloom-elementor'),
+                'label' => __('Link Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1061,13 +1071,13 @@ class Icon_List_Widget extends Widget_Base
 
         $this->start_controls_tab(
             'value_hover',
-            ['label' => __('Hover', 'bodyloom-elementor')]
+            ['label' => __('Hover', 'bodyloom-dynamic-icon-list')]
         );
 
         $this->add_control(
             'value_hover_color',
             [
-                'label' => __('Hover Color', 'bodyloom-elementor'),
+                'label' => __('Hover Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1079,7 +1089,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'value_link_hover_color',
             [
-                'label' => __('Link Hover Color', 'bodyloom-elementor'),
+                'label' => __('Link Hover Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1095,7 +1105,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'value_indent',
             [
-                'label' => __('Indent', 'bodyloom-elementor'),
+                'label' => __('Indent', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -1137,7 +1147,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'value_gap',
             [
-                'label' => __('Gap', 'bodyloom-elementor'),
+                'label' => __('Gap', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -1166,7 +1176,7 @@ class Icon_List_Widget extends Widget_Base
         $this->start_controls_section(
             'section_icon_style',
             [
-                'label' => __('Marker', 'bodyloom-elementor'),
+                'label' => __('Marker', 'bodyloom-dynamic-icon-list'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -1174,16 +1184,16 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'number_type',
             [
-                'label' => __('Number Type', 'bodyloom-elementor'),
+                'label' => __('Number Type', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SELECT,
                 'options' => [
-                    'decimal' => __('Decimal', 'bodyloom-elementor'),
-                    'decimal-leading-zero' => __('Decimal Leading Zero', 'bodyloom-elementor'),
-                    'upper-latin' => __('Uppercase Latin', 'bodyloom-elementor'),
-                    'lower-latin' => __('Lowercase Latin', 'bodyloom-elementor'),
-                    'upper-roman' => __('Uppercase Roman', 'bodyloom-elementor'),
-                    'lower-roman' => __('Lowercase Roman', 'bodyloom-elementor'),
-                    'lower-greek' => __('Greek', 'bodyloom-elementor'),
+                    'decimal' => __('Decimal', 'bodyloom-dynamic-icon-list'),
+                    'decimal-leading-zero' => __('Decimal Leading Zero', 'bodyloom-dynamic-icon-list'),
+                    'upper-latin' => __('Uppercase Latin', 'bodyloom-dynamic-icon-list'),
+                    'lower-latin' => __('Lowercase Latin', 'bodyloom-dynamic-icon-list'),
+                    'upper-roman' => __('Uppercase Roman', 'bodyloom-dynamic-icon-list'),
+                    'lower-roman' => __('Lowercase Roman', 'bodyloom-dynamic-icon-list'),
+                    'lower-greek' => __('Greek', 'bodyloom-dynamic-icon-list'),
                 ],
                 'default' => 'decimal',
                 'selectors' => [
@@ -1196,7 +1206,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'number_prefix',
             [
-                'label' => __('Number Prefix', 'bodyloom-elementor'),
+                'label' => __('Number Prefix', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::TEXT,
                 'selectors' => [
                     '{{WRAPPER}}' => '--bodyloom-icon-list-item-counter-prefix: \'{{VALUE}}\';',
@@ -1208,7 +1218,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'number_suffix',
             [
-                'label' => __('Number Suffix', 'bodyloom-elementor'),
+                'label' => __('Number Suffix', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::TEXT,
                 'selectors' => [
                     '{{WRAPPER}}' => '--bodyloom-icon-list-item-counter-suffix: \'{{VALUE}}\';',
@@ -1221,7 +1231,7 @@ class Icon_List_Widget extends Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'number_typography',
-                'exclude' => ['line_height'],
+                'exclude' => ['line_height'], // phpcs:ignore WordPressVIPMinimum.Performance.WPQueryParams.PostNotIn_exclude
                 'selector' => '{{WRAPPER}} .bodyloom-widget-icon-list-item-icon > span:before',
                 'condition' => ['global_marker' => 'numeric'],
             ]
@@ -1230,7 +1240,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'icon_size',
             [
-                'label' => __('Size', 'bodyloom-elementor'),
+                'label' => __('Size', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -1247,19 +1257,19 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'icon_vertical_align',
             [
-                'label' => __('Vertical Alignment', 'bodyloom-elementor'),
+                'label' => __('Vertical Alignment', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'flex-start' => [
-                        'title' => __('Top', 'bodyloom-elementor'),
+                        'title' => __('Top', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-v-align-top',
                     ],
                     'center' => [
-                        'title' => __('Center', 'bodyloom-elementor'),
+                        'title' => __('Center', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-v-align-middle',
                     ],
                     'flex-end' => [
-                        'title' => __('Bottom', 'bodyloom-elementor'),
+                        'title' => __('Bottom', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-v-align-bottom',
                     ],
                 ],
@@ -1274,13 +1284,13 @@ class Icon_List_Widget extends Widget_Base
 
         $this->start_controls_tab(
             'icon_normal',
-            ['label' => __('Normal', 'bodyloom-elementor')]
+            ['label' => __('Normal', 'bodyloom-dynamic-icon-list')]
         );
 
         $this->add_control(
             'icon_color',
             [
-                'label' => __('Primary Color', 'bodyloom-elementor'),
+                'label' => __('Primary Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1292,7 +1302,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'icon_secondary_color',
             [
-                'label' => __('Secondary Color', 'bodyloom-elementor'),
+                'label' => __('Secondary Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1314,7 +1324,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'icon_rotate',
             [
-                'label' => __('Rotate', 'bodyloom-elementor'),
+                'label' => __('Rotate', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'default' => ['unit' => 'deg'],
@@ -1335,13 +1345,13 @@ class Icon_List_Widget extends Widget_Base
 
         $this->start_controls_tab(
             'icon_hover',
-            ['label' => __('Hover', 'bodyloom-elementor')]
+            ['label' => __('Hover', 'bodyloom-dynamic-icon-list')]
         );
 
         $this->add_control(
             'icon_hover_color',
             [
-                'label' => __('Primary Hover', 'bodyloom-elementor'),
+                'label' => __('Primary Hover', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1353,7 +1363,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'icon_hover_secondary_color',
             [
-                'label' => __('Secondary Hover', 'bodyloom-elementor'),
+                'label' => __('Secondary Hover', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1375,7 +1385,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_control(
             'icon_rotate_hover',
             [
-                'label' => __('Rotate', 'bodyloom-elementor'),
+                'label' => __('Rotate', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'default' => ['unit' => 'deg'],
@@ -1399,7 +1409,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'icon_wrapper_size',
             [
-                'label' => __('Wrapper Size', 'bodyloom-elementor'),
+                'label' => __('Wrapper Size', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -1423,7 +1433,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'icon_padding',
             [
-                'label' => __('Padding', 'bodyloom-elementor'),
+                'label' => __('Padding', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -1446,7 +1456,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'icon_border_width',
             [
-                'label' => __('Border Width', 'bodyloom-elementor'),
+                'label' => __('Border Width', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -1469,7 +1479,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'icon_border_radius',
             [
-                'label' => __('Border Radius', 'bodyloom-elementor'),
+                'label' => __('Border Radius', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -1482,19 +1492,19 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'icon_self_align',
             [
-                'label' => __('Alignment', 'bodyloom-elementor'),
+                'label' => __('Alignment', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __('Left', 'bodyloom-elementor'),
+                        'title' => __('Left', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'center' => [
-                        'title' => __('Center', 'bodyloom-elementor'),
+                        'title' => __('Center', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-center',
                     ],
                     'right' => [
-                        'title' => __('Right', 'bodyloom-elementor'),
+                        'title' => __('Right', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
@@ -1522,7 +1532,7 @@ class Icon_List_Widget extends Widget_Base
         $this->start_controls_section(
             'section_title_style',
             [
-                'label' => __('Title', 'bodyloom-elementor'),
+                'label' => __('Title', 'bodyloom-dynamic-icon-list'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => ['title!' => ''],
             ]
@@ -1531,19 +1541,19 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'title_align',
             [
-                'label' => __('Alignment', 'bodyloom-elementor'),
+                'label' => __('Alignment', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __('Left', 'bodyloom-elementor'),
+                        'title' => __('Left', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => __('Center', 'bodyloom-elementor'),
+                        'title' => __('Center', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => __('Right', 'bodyloom-elementor'),
+                        'title' => __('Right', 'bodyloom-dynamic-icon-list'),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
@@ -1565,13 +1575,13 @@ class Icon_List_Widget extends Widget_Base
 
         $this->start_controls_tab(
             'title_normal',
-            ['label' => __('Normal', 'bodyloom-elementor')]
+            ['label' => __('Normal', 'bodyloom-dynamic-icon-list')]
         );
 
         $this->add_control(
             'title_color',
             [
-                'label' => __('Color', 'bodyloom-elementor'),
+                'label' => __('Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1584,13 +1594,13 @@ class Icon_List_Widget extends Widget_Base
 
         $this->start_controls_tab(
             'title_hover',
-            ['label' => __('Hover', 'bodyloom-elementor')]
+            ['label' => __('Hover', 'bodyloom-dynamic-icon-list')]
         );
 
         $this->add_control(
             'title_hover_color',
             [
-                'label' => __('Hover Color', 'bodyloom-elementor'),
+                'label' => __('Hover Color', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -1614,7 +1624,7 @@ class Icon_List_Widget extends Widget_Base
         $this->add_responsive_control(
             'title_gap',
             [
-                'label' => __('Gap', 'bodyloom-elementor'),
+                'label' => __('Gap', 'bodyloom-dynamic-icon-list'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -1654,9 +1664,9 @@ class Icon_List_Widget extends Widget_Base
 
             $tag = $settings['title_tag'];
 
-            echo '<' . Utils::validate_html_tag($tag) . ' ' . $this->get_render_attribute_string('list_title') . '>' .
+            echo '<' . Utils::validate_html_tag($tag) . ' ' . $this->get_render_attribute_string('list_title') . '>' . // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                 esc_html($settings['title']) .
-                '</' . Utils::validate_html_tag($tag) . '>';
+                '</' . Utils::validate_html_tag($tag) . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
         }
 
         $provider = Provider_Factory::get_provider($settings);
@@ -1665,7 +1675,7 @@ class Icon_List_Widget extends Widget_Base
         $link_type = $settings['link_click'];
         $is_dynamic = 'dynamic' === $settings['data_type'];
         ?>
-        <ul <?php echo $this->get_render_attribute_string('icon_list'); ?>>
+        <ul <?php echo $this->get_render_attribute_string('icon_list'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
             <?php
             foreach ($list_data as $index => $item) {
                 $repeater_item_setting_key = $this->get_repeater_setting_key('item', 'icon_list', $index);
@@ -1731,15 +1741,15 @@ class Icon_List_Widget extends Widget_Base
                     }
                 }
                 ?>
-                <li <?php echo $this->get_render_attribute_string($repeater_item_setting_key); ?>>
+                <li <?php echo $this->get_render_attribute_string($repeater_item_setting_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                     <?php
                     if ($has_item_link && 'full_width' === $link_type) {
-                        echo '<a ' . $this->get_render_attribute_string($link_key) . '>';
+                        echo '<a ' . $this->get_render_attribute_string($link_key) . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                     }
                     ?>
-                    <span <?php echo $this->get_render_attribute_string('list_item_text_wrap'); ?>>
+                    <span <?php echo $this->get_render_attribute_string('list_item_text_wrap'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                         <?php if ($has_icon) { ?>
-                            <span <?php echo $this->get_render_attribute_string($repeater_icon_setting_key); ?>>
+                            <span <?php echo $this->get_render_attribute_string($repeater_icon_setting_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                                 <span>
                                     <?php if ($icon) { ?>
                                         <?php Icons_Manager::render_icon($icon, ['aria-hidden' => 'true']); ?>
@@ -1747,11 +1757,11 @@ class Icon_List_Widget extends Widget_Base
                                 </span>
                             </span>
                         <?php } ?>
-                        <span <?php echo $this->get_render_attribute_string($repeater_text_setting_key); ?>>
-                            <span <?php echo $this->get_render_attribute_string('text'); ?>>
+                        <span <?php echo $this->get_render_attribute_string($repeater_text_setting_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+                            <span <?php echo $this->get_render_attribute_string('text'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                                 <?php
                                 if ($has_item_link && 'text' === $link_type) {
-                                    echo '<a ' . $this->get_render_attribute_string($link_key) . '>' .
+                                    echo '<a ' . $this->get_render_attribute_string($link_key) . '>' . // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                                         wp_kses_post($item['text']) .
                                         '</a>';
                                 } else {
@@ -1804,14 +1814,14 @@ class Icon_List_Widget extends Widget_Base
         }
 
         if (!empty($item['value'])) {
-            echo '<span ' . $this->get_render_attribute_string($repeater_value_setting_key) . '>';
+            echo '<span ' . $this->get_render_attribute_string($repeater_value_setting_key) . '>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
             $has_item_link = !empty($item['link']['url']);
             $link_type = $settings['link_click'];
             $link_key = "link_{$index}";
 
             if ($has_item_link && 'value' === $link_type) {
-                echo '<a ' . $this->get_render_attribute_string($link_key) . '>' .
+                echo '<a ' . $this->get_render_attribute_string($link_key) . '>' . // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
                     wp_kses_post($item['value']) .
                     '</a>';
             } else {
@@ -1865,32 +1875,32 @@ class Icon_List_Widget extends Widget_Base
         return [
             [
                 'field' => 'title',
-                'type' => esc_html__('Title', 'bodyloom-elementor'),
+                'type' => esc_html__('Title', 'bodyloom-dynamic-icon-list'),
                 'editor_type' => 'LINE',
             ],
             [
                 'field' => 'dynamic_text',
-                'type' => esc_html__('Dynamic Text', 'bodyloom-elementor'),
+                'type' => esc_html__('Dynamic Text', 'bodyloom-dynamic-icon-list'),
                 'editor_type' => 'LINE',
             ],
             [
                 'field' => 'dynamic_value',
-                'type' => esc_html__('Dynamic Value', 'bodyloom-elementor'),
+                'type' => esc_html__('Dynamic Value', 'bodyloom-dynamic-icon-list'),
                 'editor_type' => 'LINE',
             ],
             'dynamic_link' => [
                 'field' => 'url',
-                'type' => esc_html__('Dynamic Link', 'bodyloom-elementor'),
+                'type' => esc_html__('Dynamic Link', 'bodyloom-dynamic-icon-list'),
                 'editor_type' => 'LINK',
             ],
             [
                 'field' => 'number_prefix',
-                'type' => esc_html__('Number Prefix', 'bodyloom-elementor'),
+                'type' => esc_html__('Number Prefix', 'bodyloom-dynamic-icon-list'),
                 'editor_type' => 'LINE',
             ],
             [
                 'field' => 'number_suffix',
-                'type' => esc_html__('Number Suffix', 'bodyloom-elementor'),
+                'type' => esc_html__('Number Suffix', 'bodyloom-dynamic-icon-list'),
                 'editor_type' => 'LINE',
             ],
         ];
@@ -1909,17 +1919,17 @@ class Icon_List_Widget extends Widget_Base
             'icon_list' => [
                 [
                     'field' => 'text',
-                    'type' => esc_html__('Text', 'bodyloom-elementor'),
+                    'type' => esc_html__('Text', 'bodyloom-dynamic-icon-list'),
                     'editor_type' => 'LINE',
                 ],
                 [
                     'field' => 'value',
-                    'type' => esc_html__('Value', 'bodyloom-elementor'),
+                    'type' => esc_html__('Value', 'bodyloom-dynamic-icon-list'),
                     'editor_type' => 'LINE',
                 ],
                 'link' => [
                     'field' => 'url',
-                    'type' => esc_html__('Link', 'bodyloom-elementor'),
+                    'type' => esc_html__('Link', 'bodyloom-dynamic-icon-list'),
                     'editor_type' => 'LINK',
                 ],
             ],

@@ -49,15 +49,15 @@ If you make changes to the layout or styling controls but don't see them reflect
 
 *Elementor Elements Panel*
 
-![Elementor Elements Panel](assets/screenshots/Elementor%20Elements%20Panel%20-%20Bodyloom%20Icon%20List%20and%20Toggles%20Plugins.png)
+![Elementor Elements Panel](assets/screenshots/elementor-elements-panel-bodyloom-icon-list-and-toggles-plugins.png)
 
 *Content Edit Panel*
 
-![Content Edit Panel](assets/screenshots/Edit%20Bodyloom%20Icon%20List%20Content%20Edit%20Panel.png)
+![Content Edit Panel](assets/screenshots/edit-bodyloom-icon-list-content-edit-panel.png)
 
 *Style Edit Panel 1*
 
-![Style Edit Panel 1](assets/screenshots/Edit%20Bodyloom%20Icon%20List%20Style%20Edit%20Panel%201.png)
+![Style Edit Panel 1](assets/screenshots/edit-bodyloom-icon-list-style-edit-panel-1.png)
 
 *Style Edit Panel 2*
 

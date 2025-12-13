@@ -51,7 +51,7 @@ class Choose_Text_Control extends Base_Data_Control
     public function enqueue()
     {
         // Enqueue styles to make it look like standard buttons
-        wp_register_style('bodyloom-choose-text-control', false);
+        wp_register_style('bodyloom-choose-text-control', false, [], '1.0.0');
         wp_enqueue_style('bodyloom-choose-text-control');
         $css = "
             .elementor-control-type-choose_text .elementor-choices {

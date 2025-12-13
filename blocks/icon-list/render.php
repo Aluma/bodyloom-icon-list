@@ -15,14 +15,15 @@ if (!defined('ABSPATH')) {
 }
 
 // Map block style attributes to plugin settings format if needed
-$settings = $attributes;
+$bodyloom_settings = $attributes;
 
 // Ensure defaults
-$settings['data_type'] = isset($settings['data_type']) ? $settings['data_type'] : 'static';
+$bodyloom_settings['data_type'] = isset($bodyloom_settings['data_type']) ? $bodyloom_settings['data_type'] : 'static';
 
 // Get items from provider
-$provider = Provider_Factory::get_provider($settings);
-$items = $provider->get_items($settings);
+$bodyloom_provider = Provider_Factory::get_provider($bodyloom_settings);
+$bodyloom_items = $bodyloom_provider->get_items($bodyloom_settings);
 
 // Render
-echo Renderer::render($settings, $items);
+echo wp_kses_post(Renderer::render($bodyloom_settings, $bodyloom_items));
+

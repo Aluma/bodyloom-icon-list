@@ -1,4 +1,4 @@
-/*! bodyloom-elementor-addon - v1.19.3 - 03-12-2025 */
+/*! bodyloom-dynamic-icon-list - v1.19.3 - 03-12-2025 */
 .bodyloom-widget-icon-list-title {
     color: var(--bodyloom-icon-list-title-color, var(--bodyloom-colors-heading));
     margin: 0 0 var(--bodyloom-icon-list-title-gap, 20px);
@@ -88,6 +88,7 @@
 
 .bodyloom-widget-icon-list-item-icon svg {
     width: 1em;
+    max-width: 1em;
     height: auto;
     fill: var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link));
     transition: fill .3s ease

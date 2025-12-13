@@ -1,8 +1,8 @@
-=== Bodyloom Icon List ===
+=== Bodyloom Dynamic Icon List ===
 Contributors: Jimmy Thanki
 Tags: icon list, acf, metabox, pods, elementor
 Requires at least: 5.0
-Tested up to: 6.7
+Tested up to: 6.9
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -50,8 +50,8 @@ If you make changes to the layout or styling controls but don't see them reflect
 
 == Screenshots ==
 
-1. Elementor Elements Panel (assets/screenshots/Elementor Elements Panel - Bodyloom Icon List and Toggles Plugins.png)
-2. Content Edit Panel (assets/screenshots/Edit Bodyloom Icon List Content Edit Panel.png)
-3. Style Edit Panel 1 (assets/screenshots/Edit Bodyloom Icon List Style Edit Panel 1.png)
-4. Style Edit Panel 2 (assets/screenshots/Edit Bodyloom Icon List Style Edit Panel 2.png)
-5. Rendered Frontend Example (assets/screenshots/Bodyloom Dynamic Icon List Rendered.jpg)
+1. Elementor Elements Panel (assets/screenshots/elementor-elements-panel-bodyloom-icon-list-and-toggles-plugins.png)
+2. Content Edit Panel (assets/screenshots/edit-bodyloom-icon-list-content-edit-panel.png)
+3. Style Edit Panel 1 (assets/screenshots/edit-bodyloom-icon-list-style-edit-panel-1.png)
+4. Style Edit Panel 2 (assets/screenshots/edit-bodyloom-icon-list-style-edit-panel-2.png)
+5. Rendered Frontend Example (assets/screenshots/bodyloom-dynamic-icon-list-rendered.jpg)
