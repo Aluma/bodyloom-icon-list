@@ -1683,13 +1683,14 @@ class Icon_List_Widget extends Widget_Base
                 $this->add_render_attribute($repeater_item_setting_key, 'class', $item_class);
 
                 $repeater_text_setting_key = $this->get_repeater_setting_key('text', 'icon_list', $index);
+                $repeater_inner_key = $this->get_repeater_setting_key('inner_wrap', 'icon_list', $index);
 
-                $this->add_render_attribute($repeater_text_setting_key, 'class', [
+                $this->add_render_attribute($repeater_inner_key, 'class', [
                     "{$item_class}-text-inner",
                     "elementor-repeater-item-{$item['_id']}",
                 ]);
 
-                $this->add_render_attribute('text', 'class', "{$item_class}-text");
+                $this->add_render_attribute($repeater_text_setting_key, 'class', "{$item_class}-text");
 
                 if (!$is_dynamic) {
                     $this->add_inline_editing_attributes($repeater_text_setting_key);
@@ -1757,8 +1758,8 @@ class Icon_List_Widget extends Widget_Base
                                 </span>
                             </span>
                         <?php } ?>
-                        <span <?php echo $this->get_render_attribute_string($repeater_text_setting_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-                            <span <?php echo $this->get_render_attribute_string('text'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+                        <span <?php echo $this->get_render_attribute_string($repeater_inner_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+                            <span <?php echo $this->get_render_attribute_string($repeater_text_setting_key); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
                                 <?php
                                 if ($has_item_link && 'text' === $link_type) {
                                     echo '<a ' . $this->get_render_attribute_string($link_key) . '>' . // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
