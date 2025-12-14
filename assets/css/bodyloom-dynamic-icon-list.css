@@ -62,7 +62,9 @@
 
 .bodyloom-widget-icon-list-item-text-wrap {
     display: flex;
-    align-items: center
+    align-items: center;
+    flex: 1;
+    min-width: 0;
 }
 
 .bodyloom-widget-icon-list-item-icon {
@@ -72,6 +74,7 @@
     align-self: flex-start;
     justify-content: var(--bodyloom-icon-list-item-icon-alignment);
     flex-shrink: 0;
+    align-items: center;
 }
 
 .bodyloom-widget-icon-list-item-icon>span {
@@ -88,15 +91,18 @@
 
 .bodyloom-widget-icon-list-item-icon svg {
     width: 1em;
-    max-width: 1em;
-    height: auto;
+    height: 1em;
+    max-width: 100%;
+    object-fit: contain;
     fill: var(--bodyloom-icon-list-item-icon-color, var(--bodyloom-colors-link));
     transition: fill .3s ease
 }
 
 .bodyloom-widget-icon-list-item-icon img {
     width: 1em;
-    height: auto;
+    height: 1em;
+    max-width: 100%;
+    object-fit: contain;
     transition: width .3s ease
 }
 
@@ -353,8 +359,10 @@
 }
 
 .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
-.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item>a {
-    justify-content: space-between
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item>a,
+.bodyloom-value-position-inline .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item-text-inner {
+    justify-content: space-between;
+    width: 100%;
 }
 
 .bodyloom-widget-icon-list.bodyloom-widget-layout-row:not(.bodyloom-widget-align-right) .bodyloom-widget-icon-list-item:after {
@@ -445,8 +453,10 @@
     }
 
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
-    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item>a {
-        justify-content: space-between
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item>a,
+    .bodyloom-value-position-inline .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item-text-inner {
+        justify-content: space-between;
+        width: 100%;
     }
 
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row:not(.bodyloom-widget-tablet-align-right) .bodyloom-widget-icon-list-item:after {
@@ -538,8 +548,10 @@
     }
 
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
-    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item>a {
-        justify-content: space-between
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item>a,
+    .bodyloom-value-position-inline .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item-text-inner {
+        justify-content: space-between;
+        width: 100%;
     }
 
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row:not(.bodyloom-widget-mobile-align-right) .bodyloom-widget-icon-list-item:after {
