@@ -62,8 +62,7 @@
 
 .bodyloom-widget-icon-list-item-text-wrap {
     display: flex;
-    align-items: center;
-    width: 100%;
+    align-items: center
 }
 
 .bodyloom-widget-icon-list-item-icon {
@@ -354,8 +353,7 @@
 }
 
 .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
-.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item>a,
-.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item-text-inner {
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item>a {
     justify-content: space-between
 }
 
@@ -447,8 +445,7 @@
     }
 
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
-    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item>a,
-    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item-text-inner {
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item>a {
         justify-content: space-between
     }
 
@@ -541,8 +538,7 @@
     }
 
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
-    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item>a,
-    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item-text-inner {
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item>a {
         justify-content: space-between
     }
 
