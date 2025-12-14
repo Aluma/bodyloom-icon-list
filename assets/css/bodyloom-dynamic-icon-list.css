@@ -360,7 +360,7 @@
 
 .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
 .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item>a,
-.bodyloom-value-position-inline .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item-text-inner {
+.bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-align-stretch .bodyloom-widget-icon-list-item-text-inner {
     justify-content: space-between;
     width: 100%;
 }
@@ -454,7 +454,7 @@
 
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item>a,
-    .bodyloom-value-position-inline .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item-text-inner {
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-tablet-align-stretch .bodyloom-widget-icon-list-item-text-inner {
         justify-content: space-between;
         width: 100%;
     }
@@ -549,7 +549,7 @@
 
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item:not(.active-link-item),
     .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item>a,
-    .bodyloom-value-position-inline .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item-text-inner {
+    .bodyloom-widget-icon-list.bodyloom-widget-layout-row.bodyloom-widget-mobile-align-stretch .bodyloom-widget-icon-list-item-text-inner {
         justify-content: space-between;
         width: 100%;
     }
