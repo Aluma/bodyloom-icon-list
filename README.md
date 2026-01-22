@@ -61,8 +61,8 @@ If you make changes to the layout or styling controls but don't see them reflect
 
 *Style Edit Panel 2*
 
-![Style Edit Panel 2](assets/screenshots/Edit%20Bodyloom%20Icon%20List%20Style%20Edit%20Panel%202.png)
+![Style Edit Panel 2](assets/screenshots/edit-bodyloom-icon-list-style-edit-panel-2.png)
 
 *Rendered Frontend Example*
 
-![Rendered Frontend Example](assets/screenshots/Bodyloom%20Dynamic%20Icon%20List%20Rendered.jpg)
+![Rendered Frontend Example](assets/screenshots/bodyloom-dynamic-icon-list-rendered.jpg)
